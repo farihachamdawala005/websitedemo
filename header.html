@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Improve</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .login-box {
+            width: 50%;
+            padding: 40px;
+            text-align: left;
+        }
+        .logo {
+            text-align: center;
+            font-weight: bold;
+            color: #4caf50;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-family: 'Trebuchet MS';
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 14px;
+            text-align: center;
+        }
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .partner-login {
+            width: 100%;
+            padding: 10px;
+            background: #ffdddd;
+            color: red;
+            border: none;
+            margin-bottom: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .terms {
+            font-size: 12px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .forgot-password {
+            text-align: center;
+            display: block;
+            margin: 10px 0;
+        }
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .social-login button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            background: white;
+        }
+        .social-login img {
+            width: 20px;
+            height: 20px;
+        }
+        .illustration-box {
+            width: 50%;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .illustration-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ✅ Tablet Screens (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        /* ✅ Mobile Screens (max-width: 768px) */
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .container {
+                flex-direction: column;
+                width: 95%;
+            }
+            .login-box, .illustration-box {
+                width: 100%;
+            }
+            .illustration-box {
+                display: none; /* Hide illustration on mobile for better layout */
+            }
+            .login-btn {
+                width: 100%;
+            }
+            .social-login button {
+                width: 90%;
+            }
+        }
+
+        /* ✅ Small Screens (max-width: 480px) */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .login-box {
+                padding: 20px;
+            }
+            .login-btn {
+                font-size: 14px;
+                padding: 8px;
+            }
+            .social-login button {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1 class="logo">IMPROVE</h1>
+            <h2>Log in</h2>
+            <p>Need an IMPROVE account? <a href="#">Create an account</a></p>
+            <button class="partner-login">Are you a Partner? Log in here</button>
+            <form onsubmit="redirectToCourse(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="johnsmith@email.com" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="*******" required>
+                <p class="terms">By logging into Improve you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a></p>
+                <button type="submit" class="login-btn"> LOGIN </button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <div class="social-login">
+                    <button class="microsoft-btn"><img src="img/m.jpeg" alt="Microsoft">|<h6><a href="https://account.microsoft.com/account">Login with Microsoft</a></h6></button>
+                    <button class="google-btn"><img src="img/g.jpeg" alt="Google">|<h6><a href="https://myaccount.google.com/">Login with Google</a></h6></button>
+                </div>
+            </form>
+        </div>
+        <div class="illustration-box">
+            <img src="img/illustration.jpeg" alt="Illustration">
+        </div>
+    </div>
+
+    <script>
+        function redirectToCourse(event) {
+            event.preventDefault();
+            window.location.href = "navbar.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>IMPROVE</h1>
+        </div>
+        <div class="header-links">
+            <span>Help and Resources</span> | <span>johndoe@gmail.com</span>
+            <div class="profile-container">
+                <img src="img/logo.jpeg" alt="User Logo" class="profile-logo">
+                <div class="profile-text">
+                    <span class="profile-name">John Doe</span>
+                    <span class="profile-desc">Account Fen Inc.</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar + Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Your Account</h3>
+            
+            <ul>
+                <li><a href="index.html">📚 Course Library</a></li>
+                <li><a href="course.html">🎓 My Courses</a></li>
+                <li><a href="wish.html">❤️ My Wishlist</a></li>
+                <li><a href="ranking.html">⭐ Top Ranking</a></li>
+                <li><a href="suggestion.html">🔍 Suggestions</a></li>
+            </ul>
+        
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="filter-container">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search courses...">
+                    <button id="search-btn">🔍</button>
+                </div>
+                <!-- Category Dropdown -->
+                <div class="dropdown">
+                    <select id="filter-courses">
+                        <option value="all">All Categories</option>
+                        <option value="programming">Programming</option>
+                        <option value="design">Design</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </div>
+                <!-- Course Type Dropdown -->
+                <div class="dropdown">
+                    <select id="show-all">
+                        <option value="all">All Courses</option>
+                        <option value="new">New Arrivals</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2>Course Library</h2>
+
+            <div class="grid">
+                <!-- Course Cards (Repeat for more) -->
+                <div class="course-card">
+                    <h3>Course Name</h3>
+                    <h6>Duration: 10 min</h6>
+                    <img src="img/7.jpeg" alt="Course Image">
+                    <p>Short description of the course.</p>
+                    <button>VIEW COURSE</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Course Name</h3>
+                    <h6>Duration: 10 min</h6>
+                    <img src="img/8.jpeg" alt="Course Image">
+                    <p>Short description of the course.</p>
+                    <button>VIEW COURSE</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Course Name</h3>
+                    <h6>Duration: 10 min</h6>
+                    <img src="img/course3.png" alt="Course Image">
+                    <p>Short description of the course.</p>
+                    <button>VIEW COURSE</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Course Name</h3>
+                    <h6>Duration: 10 min</h6>
+                    <img src="img/4.png" alt="Course Image">
+                    <p>Short description of the course.</p>
+                    <button>VIEW COURSE</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Course Name</h3>
+                    <h6>Duration: 10 min</h6>
+                    <img src="img/5.png" alt="Course Image">
+                    <p>Short description of the course.</p>
+                    <button>VIEW COURSE</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Course Name</h3>
+                    <h6>Duration: 10 min</h6>
+                    <img src="img/6.png" alt="Course Image">
+                    <p>Short description of the course.</p>
+                    <button>VIEW COURSE</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
